@@ -69,11 +69,11 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `Julien Bernard.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        Je m'appelle Julien bernard <strong className="text-stone-100">étudiant en 3ème année de BUT Informatique</strong>, actuellement en formation alternancne 
+        Je m'appelle Julien bernard <strong className="text-stone-100">étudiant en 3ème année de BUT Informatique</strong>, actuellement en formation alternance  
         <strong className="text-stone-100">chez Prométhée Earth Intelligence.</strong>
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
@@ -101,16 +101,15 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `Je suis étudiant en 3ème année d'informatique, en alternance pour terminer mon Bachelor, 
+  je souhaite continuer mes études jusqu'au Bac +5 dans un master ou une école privé.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Ville', text: 'Toulouse', Icon: MapIcon},
+    {label: 'Age', text: '21', Icon: CalendarIcon},
+    {label: 'Nationalité', text: 'Français', Icon: FlagIcon},
+    {label: 'Centres d\'intêrets', text: 'Basketball, Automobiles, Culture Japonaise, cinéma', Icon: SparklesIcon},
+    {label: 'Etudes', text: 'IUT de Blagnac', Icon: AcademicCapIcon},
+    {label: 'Alternance', text: 'Prométhée Earth Intelligence', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -119,24 +118,16 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
+    name: 'Langues',
     skills: [
       {
         name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
+        level: 'B2',
+      }
     ],
   },
   {
-    name: 'Frontend development',
+    name: 'Hard Skills',
     skills: [
       {
         name: 'React',
@@ -265,39 +256,44 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2022-2025',
+    location: 'IUT de Blagnac (31)',
+    title: 'BUT Informatique',
+    content: <p>Bachelor Universitaire de Technologie Informatique, Parcours réalisation d'applications :
+    conception, développement, validation</p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2021-2022',
+    location: 'IUT de Blagnac (31)',
+    title: 'BUT RT',
+    content: <p>Bachelor Universitaire de Technologie réseaux & Télécommunications. <br></br>Réorientation après une année réalisée</p>,
+  },
+  {
+    date: '2020-2021',
+    location: 'Lycée Saint-Cricq (64)',
+    title: 'Bac Pro STI2D',
+    content: <p>Bac Pro.</p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'Août 2024 - Juin 2025',
+    location: 'Prométhée Earth Intelligence',
+    title: 'Développeur Full-Stack',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Rénovation d'une application Web de traitement de donnée sous un autre langage de programmation (VueJS).
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'Février 2024 - Avril 2024',
+    location: 'Prométhée Earth Intelligence',
+    title: 'Stage - Développement d\'une application de gestion de base de données et de version de système',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        J'ai réalisé une application web dans le but de gérer des bases de données existantes, faire des sauvegardes, restituer des données et être capable de modifier les versions du système d'applications.
       </p>
     ),
   },
@@ -332,17 +328,17 @@ export const testimonial: TestimonialSection = {
  */
 
 export const contact: ContactSection = {
-  headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  headerText: 'Contactez-moi.',
+  description: 'Voici tout mes réseaux et mes contact, vous pouvez m\'envoyer un mail afin de me poser des questions.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'julien85bernard85@gmail.com',
+      href: 'mailto:julien85bernard85@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
+      text: 'Toulouse',
       href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
     },
     {
@@ -362,9 +358,8 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/julienbernard85'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/julien-bernard-955993241/'},
   {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
   {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
 ];
