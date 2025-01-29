@@ -26,6 +26,11 @@ import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
+import englishflag from '../images/skills/english.png';
+import franceflag from '../images/skills/france.svg';
+import javaimage from '../images/skills/java.png';
+import sqlimage from '../images/skills/sql.png';
+import vuejsimage from '../images/skills/vuejs.png';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -121,8 +126,12 @@ export const skills: SkillGroup[] = [
     name: 'Langues',
     skills: [
       {
-        name: 'English',
-        level: 'B2',
+        name: 'English B2',
+        image: englishflag,
+      },
+      {
+        name: 'Français',
+        image: franceflag,
       }
     ],
   },
@@ -130,53 +139,86 @@ export const skills: SkillGroup[] = [
     name: 'Hard Skills',
     skills: [
       {
-        name: 'React',
-        level: 9,
+        name: 'Java',
+        image: javaimage,
+        text: 'Java',
       },
       {
-        name: 'Typescript',
-        level: 7,
+        name: 'SQL',
+        image: sqlimage,
+        text: 'Base de données',
       },
       {
-        name: 'GraphQL',
-        level: 6,
+        name: 'VueJS',
+        image: vuejsimage,
+        text: 'VueJS',
+      },
+      {
+        name: 'Java',
+        image: javaimage,
+        text: 'Java',
+      },
+      {
+        name: 'SQL',
+        image: sqlimage,
+        text: 'Base de données',
+      },
+      {
+        name: 'VueJS',
+        image: vuejsimage,
+        text: 'VueJS',
+      },
+      {
+        name: 'Java',
+        image: javaimage,
+        text: 'Java',
+      },
+      {
+        name: 'SQL',
+        image: sqlimage,
+        text: 'Base de données',
+      },
+      {
+        name: 'VueJS',
+        image: vuejsimage,
+        text: 'VueJS',
       },
     ],
   },
-  {
-    name: 'Backend development',
-    skills: [
-      {
-        name: 'Node.js',
-        level: 8,
-      },
-      {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
-      },
-    ],
-  },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
-      },
-    ],
-  },
+  // {
+  //   name: 'Backend development',
+  //   skills: [
+  //     {
+  //       name: 'Node.js',
+  //       level: 8,
+  //     },
+  //     {
+  //       name: 'S',
+  //       level: 5,
+  //     },
+  //     {
+  //       name: 'Golang',
+  //       level: 4,
+  //     },
+  //   ],
+  // },
+  // {
+  //   name: 'Mobile development',
+  //   skills: [
+  //     {
+  //       name: 'React Native',
+  //       level: 9,
+  //     },
+  //     {
+  //       name: 'Flutter',
+  //       level: 4,
+  //     },
+  //     {
+  //       name: 'Swift',
+  //       level: 3,
+  //     },
+  //   ],
+  // },
 ];
 
 /**
