@@ -25,9 +25,18 @@ import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
+import cimage from '../images/skills/c.png';
+import csharpimage from '../images/skills/csharp.webp';
+import cssimage from '../images/skills/css.png';
 import englishflag from '../images/skills/english.png';
 import franceflag from '../images/skills/france.svg';
+import gitimage from '../images/skills/git.png';
+import htmlimage from '../images/skills/html.png';
 import javaimage from '../images/skills/java.png';
+import javascriptimage from '../images/skills/javascript.png';
+import mongoimage from '../images/skills/mongodb.png';
+import phpimage from '../images/skills/php.png';
+import reactimage from '../images/skills/react.png';
 import sqlimage from '../images/skills/sql.png';
 import vuejsimage from '../images/skills/vuejs.png';
 import testimonialImage from '../images/testimonial.webp';
@@ -57,13 +66,12 @@ export const homePageMeta: HomepageMeta = {
  */
 export const SectionId = {
   Hero: 'hero',
-  About: 'about',
+  About: 'Profil',
   Contact: 'contact',
-  Portfolio: 'portfolio',
-  Resume: 'resume',
+  Portfolio: 'Projets',
+  Resume: 'Expériences et compétences',
   Skills: 'skills',
   Stats: 'stats',
-  Testimonials: 'testimonials',
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -78,7 +86,7 @@ export const heroData: Hero = {
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         Je m'appelle Julien bernard <strong className="text-stone-100">étudiant en 3ème année de BUT Informatique</strong>, actuellement en formation alternance  
-        <strong className="text-stone-100">chez Prométhée Earth Intelligence.</strong>
+        <strong className="text-stone-100"> chez Prométhée Earth Intelligence.</strong>
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         A travers ce site, je vais vous présenter mon portfolio
@@ -140,47 +148,50 @@ export const skills: SkillGroup[] = [
       {
         name: 'Java',
         image: javaimage,
-        text: 'Java',
       },
       {
         name: 'SQL',
         image: sqlimage,
-        text: 'Base de données',
       },
       {
         name: 'VueJS',
         image: vuejsimage,
-        text: 'VueJS',
       },
       {
-        name: 'Java',
-        image: javaimage,
-        text: 'Java',
+        name: 'Javascript',
+        image: javascriptimage,
       },
       {
-        name: 'SQL',
-        image: sqlimage,
-        text: 'Base de données',
+        name: 'C',
+        image: cimage,
       },
       {
-        name: 'VueJS',
-        image: vuejsimage,
-        text: 'VueJS',
+        name: 'C#',
+        image: csharpimage,
       },
       {
-        name: 'Java',
-        image: javaimage,
-        text: 'Java',
+        name: 'PHP',
+        image: phpimage,
       },
       {
-        name: 'SQL',
-        image: sqlimage,
-        text: 'Base de données',
+        name: 'HTML',
+        image: htmlimage,
       },
       {
-        name: 'VueJS',
-        image: vuejsimage,
-        text: 'VueJS',
+        name: 'CSS',
+        image: cssimage,
+      },
+      {
+        name: 'MongoDB',
+        image: mongoimage,
+      },
+      {
+        name: 'React',
+        image: reactimage,
+      },
+      {
+        name: 'Git',
+        image: gitimage,
       },
     ],
   },
@@ -307,7 +318,7 @@ export const education: TimelineItem[] = [
     date: '2021-2022',
     location: 'IUT de Blagnac (31)',
     title: 'BUT RT',
-    content: <p>Bachelor Universitaire de Technologie réseaux & Télécommunications. <br></br>Réorientation après une année réalisée</p>,
+    content: <p>Bachelor Universitaire de Technologie réseaux & Télécommunications. <br></br>Réorientation après une année réalisée.</p>,
   },
   {
     date: '2020-2021',
@@ -321,7 +332,7 @@ export const experience: TimelineItem[] = [
   {
     date: 'Août 2024 - Juin 2025',
     location: 'Prométhée Earth Intelligence',
-    title: 'Développeur Full-Stack',
+    title: 'Alternance - Développeur Full-Stack',
     content: (
       <p>
         Rénovation d'une application Web de traitement de donnée sous un autre langage de programmation (VueJS).
@@ -383,14 +394,14 @@ export const contact: ContactSection = {
       href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
     },
     {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      type: ContactType.LinkedIn,
+      text: 'Linkedin',
+      href: 'https://www.linkedin.com/in/julien-bernard-955993241/',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'julienbernard85',
+      href: 'https://github.com/julienbernard85',
     },
   ],
 };

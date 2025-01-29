@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import {FC, memo} from 'react';
 
 import {Skill as SkillType, SkillGroup as SkillGroupType} from '../../../data/dataDef';
@@ -23,11 +24,8 @@ export const Skill: FC<{ skill: SkillType }> = memo(({skill}) => {
 
   return (
     <div className="flex flex-col items-center">
-      <img
-        alt={name}
-        className="h-16 w-16 object-contain rounded-full border border-gray-200"
-        src={image}
-      />
+      <Image alt={name} className="h-16 w-16 object-contain border-gray-200" src={image} />
+
       <span className="mt-2 text-sm font-medium">{name}</span>
       {text && <p className="mt-1 text-xs text-gray-600 text-center">{text}</p>}
     </div>
