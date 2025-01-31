@@ -86,7 +86,9 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        Je m'appelle Julien bernard <strong className="text-stone-100">étudiant en 3ème année de BUT Informatique</strong>, actuellement en formation alternance  
+        Je m'appelle Julien bernard{' '}
+        <strong className="text-stone-100">étudiant en 3ème année de BUT Informatique</strong>, actuellement en
+        formation alternance
         <strong className="text-stone-100"> chez Prométhée Earth Intelligence.</strong>
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
@@ -120,7 +122,7 @@ export const aboutData: About = {
     {label: 'Ville', text: 'Toulouse', Icon: MapIcon},
     {label: 'Age', text: '21', Icon: CalendarIcon},
     {label: 'Nationalité', text: 'Français', Icon: FlagIcon},
-    {label: 'Centres d\'intêrets', text: 'Basketball, Automobiles, Culture Japonaise, cinéma', Icon: SparklesIcon},
+    {label: "Centres d'intêrets", text: 'Basketball, Automobiles, Culture Japonaise, cinéma', Icon: SparklesIcon},
     {label: 'Etudes', text: 'IUT de Blagnac', Icon: AcademicCapIcon},
     {label: 'Alternance', text: 'Prométhée Earth Intelligence', Icon: BuildingOffice2Icon},
   ],
@@ -140,7 +142,7 @@ export const skills: SkillGroup[] = [
       {
         name: 'Français',
         image: franceflag,
-      }
+      },
     ],
   },
   {
@@ -312,14 +314,23 @@ export const education: TimelineItem[] = [
     date: '2022-2025',
     location: 'IUT de Blagnac (31)',
     title: 'BUT Informatique',
-    content: <p>Bachelor Universitaire de Technologie Informatique, Parcours réalisation d'applications :
-    conception, développement, validation</p>,
+    content: (
+      <p>
+        Bachelor Universitaire de Technologie Informatique, Parcours réalisation d'applications : conception,
+        développement, validation
+      </p>
+    ),
   },
   {
     date: '2021-2022',
     location: 'IUT de Blagnac (31)',
     title: 'BUT RT',
-    content: <p>Bachelor Universitaire de Technologie réseaux & Télécommunications. <br></br>Réorientation après une année réalisée.</p>,
+    content: (
+      <p>
+        Bachelor Universitaire de Technologie réseaux & Télécommunications. <br></br>Réorientation après une année
+        réalisée.
+      </p>
+    ),
   },
   {
     date: '2020-2021',
@@ -335,18 +346,17 @@ export const experience: TimelineItem[] = [
     location: 'Prométhée Earth Intelligence',
     title: 'Alternance - Développeur Full-Stack',
     content: (
-      <p>
-        Rénovation d'une application Web de traitement de donnée sous un autre langage de programmation (VueJS).
-      </p>
+      <p>Rénovation d'une application Web de traitement de donnée sous un autre langage de programmation (VueJS).</p>
     ),
   },
   {
     date: 'Février 2024 - Avril 2024',
     location: 'Prométhée Earth Intelligence',
-    title: 'Stage - Développement d\'une application de gestion de base de données et de version de système',
+    title: "Stage - Développement d'une application de gestion de base de données et de version de système",
     content: (
       <p>
-        J'ai réalisé une application web dans le but de gérer des bases de données existantes, faire des sauvegardes, restituer des données et être capable de modifier les versions du système d'applications.
+        J'ai réalisé une application web dans le but de gérer des bases de données existantes, faire des sauvegardes,
+        restituer des données et être capable de modifier les versions du système d'applications.
       </p>
     ),
   },
@@ -382,7 +392,7 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Contactez-moi.',
-  description: 'Voici tout mes réseaux et mes contact, vous pouvez m\'envoyer un mail afin de me poser des questions.',
+  description: "Voici tout mes réseaux et mes contact, vous pouvez m'envoyer un mail afin de me poser des questions.",
   items: [
     {
       type: ContactType.Email,
