@@ -32,13 +32,29 @@ const ContactForm: FC = memo(() => {
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      /**
-       * This is a good starting point to wire up your form submission logic
-       * */
-      console.log('Data to send: ', data);
+  
+      try {
+        const response = await fetch('http://localhost:5000/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data), // Assurez-vous que 'data' est au bon format
+        });
+  
+        if (response.ok) {
+          alert('Message envoyé avec succès !');
+        } else {
+          alert('Erreur lors de l\'envoi du message');
+        }
+      } catch (error) {
+        console.error('Erreur de requête:', error);
+        alert('Erreur lors de l\'envoi du message');
+      }
     },
     [data],
   );
+  
 
   const inputClasses =
     'bg-neutral-700 border-0 focus:border-0 focus:outline-none focus:ring-1 focus:ring-orange-600 rounded-md placeholder:text-neutral-400 placeholder:text-sm text-neutral-200 text-sm';
