@@ -29,6 +29,7 @@ const ContactForm: FC = memo(() => {
     [data],
   );
 
+<<<<<<< HEAD
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
@@ -54,6 +55,27 @@ const ContactForm: FC = memo(() => {
     },
     [data],
   );
+=======
+  // 🔹 Fonction pour envoyer le message via l'API Route
+  const handleSendMessage = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      alert("Message envoyé !");
+      setData(defaultData);
+    } else {
+      alert("Erreur lors de l'envoi !");
+    }
+  };
+>>>>>>> main
 
   const inputClasses =
     'bg-neutral-700 border-0 focus:border-0 focus:outline-none focus:ring-1 focus:ring-orange-600 rounded-md placeholder:text-neutral-400 placeholder:text-sm text-neutral-200 text-sm';
