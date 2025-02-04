@@ -1,14 +1,21 @@
+import classNames from 'classnames';
 import Image from 'next/image';
 import {FC, memo} from 'react';
 
 import {Skill as SkillType, SkillGroup as SkillGroupType} from '../../../data/dataDef';
 
-export const SkillGroup: FC<{skillGroup: SkillGroupType}> = memo(({skillGroup}) => {
-  const {name, skills} = skillGroup;
+export const SkillGroup: FC<{ skillGroup: SkillGroupType }> = memo(({ skillGroup }) => {
+  const { name, skills } = skillGroup;
+  const isTwoSkills = skills.length === 2;
+
   return (
     <div className="flex flex-col">
       <span className="text-center text-lg font-bold">{name}</span>
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+      
+      <div className={classNames(
+        "grid gap-1",
+        isTwoSkills ? "grid-cols-2 place-items-center" : "grid-cols-2 sm:grid-cols-3 md:grid-cols-4"
+      )}>
         {skills.map((skill, index) => (
           <Skill key={`${skill.name}-${index}`} skill={skill} />
         ))}
@@ -16,6 +23,7 @@ export const SkillGroup: FC<{skillGroup: SkillGroupType}> = memo(({skillGroup}) 
     </div>
   );
 });
+
 
 SkillGroup.displayName = 'SkillGroup';
 

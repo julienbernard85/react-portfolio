@@ -9,23 +9,18 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
+import banqueImage from '../images/banque.png';
+import blagnacImage from '../images/blagnac.jpg';
+import cricqImage from '../images/cricq.jpg';
 import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+import esclaveImage1 from '../images/portfolio/esclave.png';
+import flopImage from '../images/portfolio/flop.png';
 import profilepic from '../images/profilepic.jpg';
+import prometheeImage from '../images/promethee.jpg';
+import agileimage from '../images/skills/agile.jpg';
 import cimage from '../images/skills/c.png';
+import communicationimage from '../images/skills/communication.jpg';
 import csharpimage from '../images/skills/csharp.webp';
 import cssimage from '../images/skills/css.png';
 import englishflag from '../images/skills/english.png';
@@ -34,12 +29,14 @@ import gitimage from '../images/skills/git.png';
 import htmlimage from '../images/skills/html.png';
 import javaimage from '../images/skills/java.png';
 import javascriptimage from '../images/skills/javascript.png';
-import mongoimage from '../images/skills/mongodb.png';
 import phpimage from '../images/skills/php.png';
+import presentationimage from '../images/skills/presentation.png';
+import pythonimage from '../images/skills/python.webp';
 import reactimage from '../images/skills/react.png';
 import sqlimage from '../images/skills/sql.png';
+import teamimage from '../images/skills/team.jpg';
 import vuejsimage from '../images/skills/vuejs.png';
-import testimonialImage from '../images/testimonial.webp';
+import webImage from '../images/web.png'
 import {
   About,
   ContactSection,
@@ -49,7 +46,6 @@ import {
   PortfolioItem,
   SkillGroup,
   Social,
-  TestimonialSection,
   TimelineItem,
 } from './dataDef';
 
@@ -69,10 +65,8 @@ export const SectionId = {
   About: 'Profil',
   Contact: 'contact',
   Portfolio: 'Projets',
-  Resume: 'Expériences et compétences',
-  Skills: 'skills',
+  Resume: 'Compétences et Expériences',
   Stats: 'stats',
-  Testimonials: 'testimonials',
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -92,7 +86,7 @@ export const heroData: Hero = {
         <strong className="text-stone-100"> chez Prométhée Earth Intelligence.</strong>
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        A travers ce site, je vais vous présenter mon portfolio
+        A travers ce site, je vais vous présenter mon portfolio.
       </p>
     </>
   ),
@@ -146,6 +140,27 @@ export const skills: SkillGroup[] = [
     ],
   },
   {
+    name: 'Soft skills',
+    skills: [
+      {
+        name: 'Méthodes agiles',
+        image: agileimage,
+      },
+      {
+        name: 'Travail en Equipe',
+        image: teamimage  ,
+      },
+      {
+        name: 'Communication',
+        image: communicationimage,
+      },
+      {
+        name: 'Présentation de projet',
+        image: presentationimage,
+      },
+    ],
+  },
+  {
     name: 'Hard Skills',
     skills: [
       {
@@ -185,8 +200,8 @@ export const skills: SkillGroup[] = [
         image: cssimage,
       },
       {
-        name: 'MongoDB',
-        image: mongoimage,
+        name: 'Python',
+        image: pythonimage,
       },
       {
         name: 'React',
@@ -198,40 +213,6 @@ export const skills: SkillGroup[] = [
       },
     ],
   },
-  // {
-  //   name: 'Backend development',
-  //   skills: [
-  //     {
-  //       name: 'Node.js',
-  //       level: 8,
-  //     },
-  //     {
-  //       name: 'S',
-  //       level: 5,
-  //     },
-  //     {
-  //       name: 'Golang',
-  //       level: 4,
-  //     },
-  //   ],
-  // },
-  // {
-  //   name: 'Mobile development',
-  //   skills: [
-  //     {
-  //       name: 'React Native',
-  //       level: 9,
-  //     },
-  //     {
-  //       name: 'Flutter',
-  //       level: 4,
-  //     },
-  //     {
-  //       name: 'Swift',
-  //       level: 3,
-  //     },
-  //   ],
-  // },
 ];
 
 /**
@@ -239,70 +220,32 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage1,
+    title: 'Développement d\'un site web.',
+    description: 'Site de récits d\'esclaves de l\'université Jean Jaurès.\n Le langage de programmation était PHP.',
+    url: 'https://slave-narratives.univ-tlse2.fr/map',
+    image: esclaveImage1,
+    technologies: [phpimage, htmlimage, cssimage, javascriptimage]
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
+    title: 'Développement d\'une application bancaire',
+    description: 'Ce projet en équipe de 4 consistait à créer une application pour une entreprise fictive.\n Le langage était en JavaFX.',
     url: 'https://reactresume.com',
-    image: porfolioImage2,
+    image: banqueImage,
+    technologies: [javaimage]
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage3,
+    title: 'Ajout de fonctionnalité à l\'emploie du temps de l\'université',
+    description: 'Ce projet à 3 avait pour but d\'améliorer l\'EDT en accomplissant une tâche complexe dans un temps restreint.\n Le langage était VueJS.',
+    url: '',
+    image: flopImage,
+    technologies: [vuejsimage, javascriptimage]
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
+    title: 'Développement d\'un site de commerce',
+    description: 'Ce projet à 4 servait de premier grand projet en équipe avec plusieurs étapes de processus de créations d\'un site web.\n Les langages étaient SQL, PHP et Javascript.',
+    image: webImage,
+    technologies: [phpimage, htmlimage, cssimage, javascriptimage, sqlimage],
+    url: ''
   },
 ];
 
@@ -314,6 +257,8 @@ export const education: TimelineItem[] = [
     date: '2022-2025',
     location: 'IUT de Blagnac (31)',
     title: 'BUT Informatique',
+    image: blagnacImage,
+    link: 'https://www.iut-blagnac.fr/fr/',
     content: (
       <p>
         Bachelor Universitaire de Technologie Informatique, Parcours réalisation d'applications : conception,
@@ -324,7 +269,9 @@ export const education: TimelineItem[] = [
   {
     date: '2021-2022',
     location: 'IUT de Blagnac (31)',
-    title: 'BUT RT',
+    title: 'BUT Réseaux & Télécommunications',
+    image: blagnacImage,
+    link: 'https://www.iut-blagnac.fr/fr/',
     content: (
       <p>
         Bachelor Universitaire de Technologie réseaux & Télécommunications. <br></br>Réorientation après une année
@@ -335,8 +282,10 @@ export const education: TimelineItem[] = [
   {
     date: '2020-2021',
     location: 'Lycée Saint-Cricq (64)',
-    title: 'Bac Pro STI2D',
-    content: <p>Bac Pro.</p>,
+    title: 'Bac Technologique STI2D',
+    image: cricqImage,
+    link: 'https://www.lycee-saint-cricq.org',
+    content: <p>Bac Technologique obtenu.</p>,
   },
 ];
 
@@ -345,6 +294,8 @@ export const experience: TimelineItem[] = [
     date: 'Août 2024 - Juin 2025',
     location: 'Prométhée Earth Intelligence',
     title: 'Alternance - Développeur Full-Stack',
+    image: prometheeImage,
+    link: 'https://www.promethee.earth/',
     content: (
       <p>Rénovation d'une application Web de traitement de donnée sous un autre langage de programmation (VueJS).</p>
     ),
@@ -353,6 +304,8 @@ export const experience: TimelineItem[] = [
     date: 'Février 2024 - Avril 2024',
     location: 'Prométhée Earth Intelligence',
     title: "Stage - Développement d'une application de gestion de base de données et de version de système",
+    image: prometheeImage,
+    link: 'https://www.promethee.earth/',
     content: (
       <p>
         J'ai réalisé une application web dans le but de gérer des bases de données existantes, faire des sauvegardes,
@@ -361,30 +314,6 @@ export const experience: TimelineItem[] = [
     ),
   },
 ];
-
-/**
- * Testimonial section
- */
-export const testimonial: TestimonialSection = {
-  imageSrc: testimonialImage,
-  testimonials: [
-    {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
-    },
-  ],
-};
 
 /**
  * Contact section
@@ -423,6 +352,4 @@ export const contact: ContactSection = {
 export const socialLinks: Social[] = [
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/julienbernard85'},
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/julien-bernard-955993241/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
 ];

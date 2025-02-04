@@ -81,6 +81,7 @@ export interface PortfolioItem {
   description: string;
   url: string;
   image: string | StaticImageData;
+  technologies?: string[];
 }
 
 /**
@@ -91,20 +92,8 @@ export interface TimelineItem {
   location: string;
   title: string;
   content: JSX.Element;
-}
-
-/**
- * Testimonial section
- */
-export interface TestimonialSection {
-  imageSrc?: string | StaticImageData;
-  testimonials: Testimonial[];
-}
-
-export interface Testimonial {
   image?: string;
-  name: string;
-  text: string;
+  link: string;
 }
 
 /**
