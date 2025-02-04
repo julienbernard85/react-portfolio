@@ -87,7 +87,6 @@ export const heroData: Hero = {
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         A travers ce site, je vais vous présenter mon portfolio.
-        A travers ce site, je vais vous présenter mon portfolio.
       </p>
     </>
   ),
