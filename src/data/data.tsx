@@ -92,8 +92,8 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
-      text: 'Resume',
+      href: '/Julien_BERNARD.pdf',
+      text: 'CV',
       primary: true,
       Icon: ArrowDownTrayIcon,
     },
@@ -229,14 +229,14 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Développement d\'une application bancaire',
     description: 'Ce projet en équipe de 4 consistait à créer une application pour une entreprise fictive.\n Le langage était en JavaFX.',
-    url: 'https://reactresume.com',
+    url: '#',
     image: banqueImage,
     technologies: [javaimage]
   },
   {
     title: 'Ajout de fonctionnalité à l\'emploie du temps de l\'université',
     description: 'Ce projet à 3 avait pour but d\'améliorer l\'EDT en accomplissant une tâche complexe dans un temps restreint.\n Le langage était VueJS.',
-    url: '',
+    url: 'https://flopedt.iut-blagnac.fr',
     image: flopImage,
     technologies: [vuejsimage, javascriptimage]
   },
@@ -245,7 +245,7 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'Ce projet à 4 servait de premier grand projet en équipe avec plusieurs étapes de processus de créations d\'un site web.\n Les langages étaient SQL, PHP et Javascript.',
     image: webImage,
     technologies: [phpimage, htmlimage, cssimage, javascriptimage, sqlimage],
-    url: ''
+    url: '#'
   },
 ];
 

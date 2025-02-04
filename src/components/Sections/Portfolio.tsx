@@ -16,7 +16,7 @@ const Portfolio: FC = memo(() => {
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.Portfolio}>
       <div className="flex flex-col gap-y-8">
-        <h2 className="self-center text-xl font-bold text-white">Check out some of my work</h2>
+        <h2 className="self-center text-xl font-bold text-white">Voici quelques projets durant mes études.</h2>
         <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {portfolioItems.map((item, index) => {
             const {title, image} = item;
@@ -65,12 +65,17 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
 
   const handleItemClick = useCallback(
     (event: MouseEvent<HTMLElement>) => {
+
+      if (url === '#') {
+        event.preventDefault();
+        return;
+      }
       if (mobile && !showOverlay) {
         event.preventDefault();
         setShowOverlay(!showOverlay);
       }
     },
-    [mobile, showOverlay],
+    [mobile, showOverlay, url],
   );
 
   return (
