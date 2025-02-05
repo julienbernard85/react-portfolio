@@ -20,7 +20,7 @@ app.post('/send-email', async (req, res) => {
   const msg = {
     to: 'julien85bernard85@gmail.com', // Votre adresse e-mail
     from: email, // L'adresse e-mail de l'utilisateur
-    subject: `Message de ${name}`,
+    subject: `Message de ${name} provenant du portfolio`,
     text: message,
   };
 
