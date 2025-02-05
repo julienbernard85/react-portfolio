@@ -1,38 +1,34 @@
-// /server/server.js
-/* eslint-env node */
+import sgMail from '@sendgrid/mail';
 
-const express = import('express');
-const sgMail = import('@sendgrid/mail');
-const cors = import('cors');
-const process = import('dotenv').config();
 
-const app = express();
-const port = 5000;
+// eslint-disable-next-line no-undef
+sgMail.setApiKey(process.env.api_key);
 
-sgMail.setApiKey(process.env.api_key); // Remplacez par votre clé API SendGrid
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({error: 'Méthode non autorisée'});
+  }
 
-app.use(cors()); // Ajoutez cette ligne pour autoriser toutes les requêtes
-app.use(express.json());
-
-app.post('/send-email', async (req, res) => {
   const {name, email, message} = req.body;
 
+  if (!name || !email || !message) {
+    return res.status(400).json({error: 'Tous les champs sont requis'});
+  }
+
   const msg = {
-    to: 'julien85bernard85@gmail.com', // Votre adresse e-mail
-    from: email, // L'adresse e-mail de l'utilisateur
-    subject: `Message de ${name}`,
-    text: message,
+    to: 'julien85bernard85@gmail.com',
+    from: 'bernard85julien85@gmail.com',
+    replyTo: email,
+    subject: `Message de ${name} depuis le portfolio`,
+    text: `Message de ${name} (${email}) :\n\n${message}`,
   };
 
   try {
     await sgMail.send(msg);
-    res.status(200).send('Message envoyé');
+    return res.status(200).json({success: true, message: 'Message envoyé avec succès !'});
   } catch (error) {
-    console.error(error);
-    res.status(500).send("Erreur lors de l'envoi");
+    // eslint-disable-next-line no-undef
+    console.error('Erreur SendGrid:', error);
+    return res.status(500).json({error: "Erreur lors de l'envoi du message"});
   }
-});
-
-app.listen(port, () => {
-  console.log(`Serveur démarré sur http://localhost:${port}`);
-});
+}
