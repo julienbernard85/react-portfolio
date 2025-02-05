@@ -20,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       from: email, // L'email de l'expéditeur
       subject: `Nouveau message de ${name}`,
       text: message,
-      html: message,
+      html: `<p><strong>Message:</strong> ${message}</p>`,
     };
 
     try {
