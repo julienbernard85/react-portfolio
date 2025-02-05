@@ -18,17 +18,25 @@ import esclaveImage1 from '../images/portfolio/esclave.png';
 import flopImage from '../images/portfolio/flop.png';
 import profilepic from '../images/profilepic.jpg';
 import prometheeImage from '../images/promethee.jpg';
+import adminimage from '../images/skills/admin.png';
 import agileimage from '../images/skills/agile.jpg';
 import cimage from '../images/skills/c.png';
+import codeimage from '../images/skills/code.png';
 import communicationimage from '../images/skills/communication.jpg';
 import csharpimage from '../images/skills/csharp.webp';
 import cssimage from '../images/skills/css.png';
 import englishflag from '../images/skills/english.png';
 import franceflag from '../images/skills/france.svg';
 import gitimage from '../images/skills/git.png';
+import githubimage from '../images/skills/github.png';
+import grafanaimage from '../images/skills/grafana.png';
 import htmlimage from '../images/skills/html.png';
 import javaimage from '../images/skills/java.png';
 import javascriptimage from '../images/skills/javascript.png';
+import k9simage from '../images/skills/k9s.png';
+import microsoftimage from '../images/skills/microsoft.png';
+import mobaimage from '../images/skills/moba.jpg';
+import neoimage from '../images/skills/neo4j.png';
 import phpimage from '../images/skills/php.png';
 import presentationimage from '../images/skills/presentation.png';
 import pythonimage from '../images/skills/python.webp';
@@ -161,6 +169,43 @@ export const skills: SkillGroup[] = [
     ],
   },
   {
+    name: 'Outils Maîtrisés',
+    skills: [
+      {
+        name: 'Visual Studio Code',
+        image: codeimage,
+      },
+      {
+        name: 'MobaXterm',
+        image: mobaimage  ,
+      },
+      {
+        name: 'GitHub',
+        image: githubimage,
+      },
+      {
+        name: 'PHPMyAdmin',
+        image: adminimage,
+      },
+      {
+        name: 'K9S',
+        image: k9simage,
+      },
+      {
+        name: 'Neo4J',
+        image: neoimage,
+      },
+      {
+        name: 'Grafana',
+        image: grafanaimage,
+      },
+      {
+        name: 'Microsoft 365',
+        image: microsoftimage,
+      },
+    ],
+  },
+  {
     name: 'Hard Skills',
     skills: [
       {
@@ -229,7 +274,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Développement d\'une application bancaire',
     description: 'Ce projet en équipe de 4 consistait à créer une application pour une entreprise fictive.\n Le langage était en JavaFX.',
-    url: '#',
+    url: 'https://github.com/IUT-Blagnac/sae2023-bank-4a1.git',
     image: banqueImage,
     technologies: [javaimage]
   },
