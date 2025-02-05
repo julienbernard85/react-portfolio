@@ -18,11 +18,13 @@ app.post('/send-email', async (req, res) => {
   const {name, email, message} = req.body;
 
   const msg = {
-    to: 'julien85bernard85@gmail.com', // Votre adresse e-mail
-    from: email, // L'adresse e-mail de l'utilisateur
-    subject: `Message de ${name} provenant du portfolio`,
-    text: message,
+    to: 'julien85bernard85@gmail.com', // Ton adresse de réception
+    from: 'bernard85julien85@gmail.com', // L'email vérifié sur SendGrid
+    replyTo: email, // Pour répondre directement à l'expéditeur
+    subject: `Message de ${name} depuis le portfolio`,
+    text: `Message de ${name} (${email}) :\n\n${message}`,
   };
+  
 
   try {
     await sgMail.send(msg);
